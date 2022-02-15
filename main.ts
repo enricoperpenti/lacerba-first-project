@@ -49,5 +49,3 @@ let myListNumber: number[] = [12, 45, 98, 52]; // Uso questa notazione per dire 
 let myListString: string[] = ["a", "b", "c"]; // Uso questa notazione per dire che sarà un'array di stringhe
 
 let myTuple: [string, number] = ["a", 3,]; // Uso questa notazione per dire che questo array o lista contiene 2 valori: il primo di tipo stringa e il secondo di tipo numerico. Posso assegnare quante tipologie voglio. Questa tipologia si chiama "Tupla".
-
-//comment
