@@ -89,3 +89,14 @@ averageChallenge = sumChallenge / numberChallenge.length;
 
 console.log(`La somma è ${sumChallenge}`);
 console.log(`La media è ${averageChallenge}`);
+
+// Altro metodo
+let sum = 0;
+let average = 0;
+for (let num of numberChallenge) {
+    sum += num;
+}
+
+average = sum / numberChallenge.length;
+console.log(sum);
+console.log(average);
