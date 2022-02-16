@@ -72,7 +72,7 @@ for (const i of numbers) {
 console.log('Ciclo while');
 let z = 1;
 while (z < 10) {
-    console.log(`\t${z}^2 = ${z * z}`)
+    console.log(`\t${z}^2 = ${z * z}`);
     z++;
 }
 
