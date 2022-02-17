@@ -90,7 +90,7 @@ averageChallenge = sumChallenge / numberChallenge.length;
 console.log(`La somma è ${sumChallenge}`);
 console.log(`La media è ${averageChallenge}`);
 
-// Altro metodo
+// Altro metodo Challenge
 let sum = 0;
 let average = 0;
 for (let num of numberChallenge) {
@@ -100,3 +100,68 @@ for (let num of numberChallenge) {
 average = sum / numberChallenge.length;
 console.log(sum);
 console.log(average);
+
+
+// If e Switch
+
+// If
+let c = 1;
+while (c < 10) {
+    if (c !== 5) {
+        console.log(`\t${c}^2 = ${c * c}`);
+    } else {
+        console.log(`\tIl numero è 5, quindi: ${c}^2 = ${c * c}`);
+    }  
+    c = c + 1;
+}
+
+let a = 1;
+while (a < 10) {
+    if (a < 5) {
+        console.log(`\t${a}^2 = ${a * a}`);
+    } else if (a == 5) {
+        console.log(`\ta vale 5!`);
+    }  else {
+        console.log(`\t${a}^3 = ${a * a * a}`);
+    }
+    a = a + 1;
+}
+
+let b = 1;
+while (true) {
+    if (b > 100) {
+        break; // si utilizza all'interno dei cicli per fermarlo all'arrivo della condizione
+    }
+    console.log(`${b}^2 = ${b * b}`);
+    b = b + 1;
+}
+
+let d = 0;
+while (true) {
+    d = d + 1;
+    if (d > 100) {
+        break; // si utilizza all'interno dei cicli per fermarlo all'arrivo della condizione
+    }
+    if (d % 2 == 0) {
+        continue; // si utilizza all'interno dei cicli per fermarlo in quella condizione, ma continua il ciclo
+    }
+    console.log(`\t${d}^2 = ${d * d}`);
+}
+
+// Switch
+let f: number = 1;
+
+switch (f) {
+    case 1:
+        console.log('f vale 1');
+        break;
+    case 2:
+        console.log('f vale 2');
+        break;
+    case 10:
+        console.log('f vale 10');
+        break;
+    default:
+        console.log('Non conosco il valore di f!');
+        break;
+}
