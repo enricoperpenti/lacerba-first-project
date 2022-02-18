@@ -226,8 +226,6 @@ const random = (min: number, max: number): number => { // creo una funzione che 
 
 console.log('random number between 3 and 5', random(3, 5));
 
-// test other
-
 
 
 
