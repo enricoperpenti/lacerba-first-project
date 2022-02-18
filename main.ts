@@ -165,3 +165,74 @@ switch (f) {
         console.log('Non conosco il valore di f!');
         break;
 }
+
+
+// Functions
+function hello() {
+    console.log('Hello World!');
+}
+hello();
+
+
+function hi(name: string) {
+    console.log(`Hello ${name}`);
+}
+hi("Enrico");
+
+
+function saluto(name: string): string { // gli dico che deve ritornare una stringa
+    console.log(`Hello ${name}`);
+    return 'questa è la stringa di ritorno';
+}
+saluto("Marco");
+const returnSaluto = saluto('Giovanni');
+console.log(returnSaluto);
+
+
+function greeting(name: string) {
+    return `Ciao ${name}`;
+}
+console.log(greeting('Giacomo'));
+
+
+function greetingLang(name: string, lang: 'en' | 'it') { // dico che lang deve avere valore en o it
+    if (lang == 'en') {
+        return `Hello ${name}!`;
+    } else {
+        return `Ciao ${name}!`;
+    }
+}
+console.log(greetingLang('Giacomo', 'en'));
+console.log(greetingLang('Aldo', 'it'));
+
+
+function greetingLanguages(name: string, lang: 'en' | 'it' | 'es' = 'it') { // dico che lang deve avere valore en o it o es, e dico che il valore di default è it
+    const greetMap = {
+        'en': 'Hello',
+        'it': 'Ciao',
+        'es': 'Hola',
+    };
+    let greetingWorld = greetMap[lang];
+    return `${greetingWorld} ${name}!`;
+}
+console.log(greetingLanguages('Giorgio', 'en'));
+console.log(greetingLanguages('Davide'));
+
+
+// Arrow function
+const random = (min: number, max: number): number => { // creo una funzione che mi genera un numero random casuale tra 2 valori (min e max), e mi deve ritornare un numero, il valore di ritorno non è obbligatorio
+    return Math.random() * (max - min) + min;
+}
+
+console.log('random number between 3 and 5', random(3, 5));
+
+
+
+
+
+
+
+
+
+
+
