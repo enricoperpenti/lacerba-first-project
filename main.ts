@@ -320,5 +320,47 @@ console.log(`min = ${minimo(arrMinMax)}`);
 console.log(`max = ${massimo(arrMinMax)}`);
 
 
+// Funzioni anonime
+function printFunction(func: () => void) { // una funzione che prende in ingresso un'altra funzione di tipo "void", ciò vuol dire che può ritornare qualcosa oppure niente e non ha parametri, è una funzione di ordine superiore, perchè richiama altre funzioni
+    console.log('calling function');
+    func();
+    console.log('function called function');
+}
+
+printFunction(() => { // quella all'interno è una funzione anonima
+    console.log(greeting('Enrico'));
+});
 
 
+//------------ Creo un'array di numeri quadrati primo metodo
+const numeri: number[] = [1, 2, 3, 4, 5];
+
+let numeriQuadrati1: number[] = [];
+
+for (let num of numeri) {
+    numeriQuadrati1.push(num * num);
+}
+console.log(numeriQuadrati1);
+
+
+//------------ Creo un'array di numeri quadrati secondo metodo funzione anonima di JS
+const numeriQuadrati2 = numeri.map(num => {
+    return num * num;
+});
+console.log(numeriQuadrati2);
+
+
+//------------ Creo un'array di numeri quadrati terzo metodo funzione anonima di JS, senza il return perchè la funzione ha solo una riga
+const numeriQuadrati3 = numeri.map((num) =>  num * num);
+console.log(numeriQuadrati3);
+
+// ------------ Creo un'array di numeri dispari
+const oddNumbers = numeri.filter((n) => n % 2 != 0); // filter, cicla l'array e bisogna dargli un algoritmo che restituisca true o false, e crea il nuovo array con i "true"
+console.log(oddNumbers);
+
+const oddNumbers2 = numeri.filter((n) => n % 2 != 0).map((n) => n + 10); // sommo 10 a tutti i numeri dispari
+console.log(oddNumbers2);
+
+// ------------ Risultato maggiore di 3
+const searchNumber = numeri.find(n => n > 3); // find funziona come filter, solo che mi restituisce un solo numero, il primo che soddisfa la condizione
+console.log(searchNumber);
