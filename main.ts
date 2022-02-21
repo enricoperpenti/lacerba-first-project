@@ -228,9 +228,96 @@ console.log('random number between 3 and 5', random(3, 5));
 
 
 
+// Challenge Functions
+
+//------------ Challenge somma e media
+
+const sumFunction = (numb: number[]) => {
+    let somma = 0;
+
+    for (let i of numb) {
+        somma += i;
+    }
+    console.log(`La somma è: ${somma}`);
+    averageFunction(somma, numb.length);
+}
+
+const averageFunction = (sum: number, numb: number) => {
+    let media = 0;
+    media = sum / numb;
+    console.log(`La media è: ${media}`);
+}
+
+sumFunction([1, 2, 3, 4, 5]);
 
 
+//------------ Challenge trovare min e max
 
+const minMaxFunction = (numb: number[]) => {
+    let min = numb[0];
+    let max = numb[0];
+    for (let i = 0; i < numb.length; i++) {
+        if (max < numb[i]) {
+            max = numb[i];
+        } else {
+            min = numb[i];
+        }
+    }
+    console.log(`Il numero minore è ${min}, il numero maggiore è ${max}`);
+}
+
+minMaxFunction([1, 2, 3, 4, 5]);
+minMaxFunction([25, 14, 46, 29, 5]);
+
+
+// Soluzioni Challenge 
+
+//------------ Soluzione Challenge somma e media
+const arr = [1, 2, 3, 4, 5];
+
+function summa(arr: number[]): number {
+    let sum = 0;
+    for (let num of arr) {
+        sum += num;
+    }
+    return sum;
+}
+
+function media(arr: number[]) {
+    const sum = summa(arr);
+    return sum / arr.length;
+}
+
+console.log(`somma = ${summa(arr)}`);
+console.log(`media = ${media(arr)}`);
+
+
+//------------ Soluzione Challenge trovare min e max
+
+let arrMinMax = [3, 2, 1, 5, 4, 12, -1, 5];
+
+const minimo = (arr: number[]): number => {
+    let min = arr[0];
+    for (let n of arr) {
+        if (n < min) {
+            min = n
+        }
+    }
+    return min;
+}
+
+const massimo = (arr: number[]): number => {
+    let max = arr[0];
+    for (let n of arr) {
+        if (n > max) {
+            max = n
+        }
+    }
+    return max;
+}
+
+console.log(`min = ${minimo(arrMinMax)}`);
+console.log(`max = ${massimo(arrMinMax)}`);
 
 
 
