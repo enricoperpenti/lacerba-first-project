@@ -364,3 +364,9 @@ console.log(oddNumbers2);
 // ------------ Risultato maggiore di 3
 const searchNumber = numeri.find(n => n > 3); // find funziona come filter, solo che mi restituisce un solo numero, il primo che soddisfa la condizione
 console.log(searchNumber);
+
+
+// Compilare codice in tsc
+/*
+Digitando "tsc" nella console, mi creerà un file js con il file Typescript leggibile dai browser.. la cartella di output è stata impostata nel file "tsconfig.json" --> "outDir": "./dist"
+*/
