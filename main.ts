@@ -1,3 +1,6 @@
+/* Importare moduli o librerie */
+var faker = require('faker');
+
 /* console.log('Hello World!');
 
 let myVar: number = 3;
@@ -370,3 +373,22 @@ console.log(searchNumber);
 /*
 Digitando "tsc" nella console, mi creerà un file js con il file Typescript leggibile dai browser.. la cartella di output è stata impostata nel file "tsconfig.json" --> "outDir": "./dist"
 */
+
+
+// Modulo npm (node package manager)
+/*
+Come installare e gestire pacchetti esterni da utilizzare all'interno di un progetto.
+Ad esempio per installare Faker.js (un generatore di informazioni inventate), digito nella console "npm install faker --save-dev", --save-dev mi serve per renderlo disponibile solo per la fase di sviluppo.
+Lo importiamo all'inizio del file js-ts in cui lo andiamo ad utilizzare "var faker = require('faker');".
+Se riscontro problemi è sempre meglio consultare la guida del pacchetto, in questo caso "https://www.npmjs.com/package/faker/v/5.5.3".
+Ora dovrebbe essere rponto per l'uso.
+*/
+
+var randomName = faker.name.findName();
+var randomEmail = faker.internet.email(); 
+console.log(randomName, randomEmail);
+
+for (let i = 0; i < 10; i++) {
+    const randomNames = faker.name.firstName();
+    console.log(randomNames);
+}

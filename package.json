@@ -10,5 +10,11 @@
   "license": "ISC",
   "repository": {
     "url": "https://github.com/enricoperpenti/lacerba-first-project"
+  },
+  "dependencies": {
+    "faker": "^5.5.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.19"
   }
 }
